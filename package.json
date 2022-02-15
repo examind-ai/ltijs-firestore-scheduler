@@ -2,6 +2,10 @@
   "name": "@examind/ltijs-firestore-scheduler",
   "version": "0.1.0",
   "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/examind-ai/ltijs-firestore-scheduler.git"
+  },
   "main": "dist/purgeStaleDocuments.js",
   "types": "dist/purgeStaleDocuments.d.js",
   "scripts": {
