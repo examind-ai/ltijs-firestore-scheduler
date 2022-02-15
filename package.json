@@ -2,10 +2,11 @@
   "name": "ltijs-firestore-scheduler",
   "version": "0.1.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/purgeStaleDocuments.js",
+  "types": "dist/purgeStaleDocuments.d.js",
   "scripts": {
     "compile": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepublish": "tsc"
   },
   "keywords": [],
   "author": "",
