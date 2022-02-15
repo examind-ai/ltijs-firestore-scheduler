@@ -8,7 +8,7 @@
 
 ## Introduction
 
-This package purges stage documents created by `ltijs-firestore` by deploying a [Firebase Function](https://firebase.google.com/docs/functions/schedule-functions) that runs periodically.
+This package purges stage documents created by `@examind/ltijs-firestore` by deploying a [Firebase Function](https://firebase.google.com/docs/functions/schedule-functions) that runs periodically.
 
 ## Installation
 
@@ -31,16 +31,16 @@ firebase init functions
 - Do you want to use ESLint to catch probable bugs and enforce style? (Y/n): <kbd>n</kbd>
 - Do you want to install dependencies with npm now? (Y/n): <kbd>y</kbd>
 
-Install `ltijs-firestore-scheduler`:
+Install `@examind/ltijs-firestore-scheduler`:
 
 ```
-npm install ltijs-firestore-scheduler
+npm install @examind/ltijs-firestore-scheduler
 ```
 
 Replace contents of `functions/index.ts` with:
 
 ```
-export { purgeStaleDocuments } from 'ltijs-firestore-scheduler';
+export { purgeStaleDocuments } from '@examind/ltijs-firestore-scheduler';
 ```
 
 Deploy Function:

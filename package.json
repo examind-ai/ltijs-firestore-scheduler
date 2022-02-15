@@ -1,5 +1,5 @@
 {
-  "name": "ltijs-firestore-scheduler",
+  "name": "@examind/ltijs-firestore-scheduler",
   "version": "0.1.0",
   "description": "",
   "main": "dist/purgeStaleDocuments.js",
