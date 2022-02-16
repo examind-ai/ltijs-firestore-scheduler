@@ -27,10 +27,10 @@ export const purgeStaleDocuments = functions
   .runWith({
     timeoutSeconds: process.env.CLOUD_FUNCTION_TIMEOUT_SECONDS
       ? parseInt(process.env.CLOUD_FUNCTION_TIMEOUT_SECONDS, 10)
-      : 300,
+      : 120,
     memory: isMemory(process.env.CLOUD_FUNCTION_MEMORY)
       ? process.env.CLOUD_FUNCTION_MEMORY
-      : '1GB',
+      : '256MB',
   })
   .pubsub.schedule(
     process.env.CLOUD_FUNCTION_SCHEDULE ?? 'every 15 minutes',
