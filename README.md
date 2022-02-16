@@ -51,6 +51,26 @@ Replace contents of `functions/index.ts` with:
 export { purgeStaleDocuments } from '@examind/ltijs-firestore-scheduler';
 ```
 
+Set environment variables before exporting the function to change deployment options:
+
+```
+process.env.CLOUD_FUNCTION_REGION = 'northamerica-northeast1';
+process.env.CLOUD_FUNCTION_TIMEOUT_SECONDS = '300';
+process.env.CLOUD_FUNCTION_MEMORY = '1GB';
+process.env.CLOUD_FUNCTION_SCHEDULE = 'every 5 minutes';
+
+export { purgeStaleDocuments } from '@examind/ltijs-firestore-scheduler';
+```
+
+Available deployment options:
+
+| Environment Variable           | Description | Default          |
+| ------------------------------ | ----------- | ---------------- |
+| CLOUD_FUNCTION_REGION          | Region      | us-central1      |
+| CLOUD_FUNCTION_TIMEOUT_SECONDS | Timeout     | 120              |
+| CLOUD_FUNCTION_MEMORY          | Memory      | 256MB            |
+| CLOUD_FUNCTION_SCHEDULE        | Schedule    | every 15 minutes |
+
 Deploy Function:
 
 ```
