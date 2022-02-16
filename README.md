@@ -31,6 +31,13 @@ firebase init functions
 - Do you want to use ESLint to catch probable bugs and enforce style? (Y/n): <kbd>n</kbd>
 - Do you want to install dependencies with npm now? (Y/n): <kbd>y</kbd>
 
+Upgrade `firebase-admin` package:
+
+```
+cd functions
+npm install firebase-admin@latest
+```
+
 Install `@examind/ltijs-firestore-scheduler`:
 
 ```
