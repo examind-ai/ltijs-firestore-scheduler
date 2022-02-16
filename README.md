@@ -34,6 +34,7 @@ firebase init functions
 Install `@examind/ltijs-firestore-scheduler`:
 
 ```
+cd functions
 npm install @examind/ltijs-firestore-scheduler
 ```
 
