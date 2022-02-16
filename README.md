@@ -52,3 +52,10 @@ firebase deploy --only functions
 ## Contibution
 
 If you find a bug or think that something is hard to understand, please open an issue. Pull requests are also welcome 🙂
+
+## Publish
+
+- package version in package.json
+- `npm install`
+- commit changes
+- `npm publish --access public`
