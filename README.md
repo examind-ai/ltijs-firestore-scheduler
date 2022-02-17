@@ -6,11 +6,11 @@
 
 > LTIJS Cloud Function script to be used with LTIJS Firestore to purge stale documents.
 
-## Introduction
+# Introduction
 
-This package purges stage documents created by `@examind/ltijs-firestore` by deploying a [Firebase Function](https://firebase.google.com/docs/functions/schedule-functions) that runs periodically.
+This package purges stale documents created by `@examind/ltijs-firestore` by deploying a [Firebase Function](https://firebase.google.com/docs/functions/schedule-functions) that runs periodically.
 
-## Installation
+# Installation
 
 Install Firebase CLI:
 
@@ -18,27 +18,29 @@ Install Firebase CLI:
 npm install -g firebase-tools@10.0.1
 ```
 
-Inside your project folder (it can be any folder and it's recommended that you use an empty one), initialize a Firebase project:
+Create a new empty folder and inside of it, initialize a Firebase project:
 
 ```
 firebase init functions
 ```
 
-- Are you ready to proceed (Y/n): <kbd>y</kbd>
+Select the following options:
+
+- Are you ready to proceed (Y/n): `y`
 - Choose your account
 - Choose your project
-- What language would you like to use to write Cloud Functions? (JavaScript or TypeScript)
-- Do you want to use ESLint to catch probable bugs and enforce style? (Y/n): <kbd>n</kbd>
-- Do you want to install dependencies with npm now? (Y/n): <kbd>y</kbd>
+- What language would you like to use to write Cloud Functions? `TypeScript`
+- Do you want to use ESLint to catch probable bugs and enforce style? (Y/n): `n`
+- Do you want to install dependencies with npm now? (Y/n): `y`
 
-Upgrade `firebase-admin` package:
+Upgrade `firebase-admin` package inside the functions folder:
 
 ```
 cd functions
 npm install firebase-admin@latest
 ```
 
-Install `@examind/ltijs-firestore-scheduler`:
+Install `@examind/ltijs-firestore-scheduler` inside the functions folder:
 
 ```
 cd functions
@@ -51,7 +53,7 @@ Replace contents of `functions/index.ts` with:
 export { purgeStaleDocuments } from '@examind/ltijs-firestore-scheduler';
 ```
 
-Set environment variables before exporting the function to change deployment options:
+Optional: set environment variables to change deployment options:
 
 ```
 process.env.CLOUD_FUNCTION_REGION = 'northamerica-northeast1';
@@ -71,19 +73,20 @@ Available deployment options:
 | CLOUD_FUNCTION_MEMORY          | Memory      | 256MB            |
 | CLOUD_FUNCTION_SCHEDULE        | Schedule    | every 15 minutes |
 
+<br />
 Deploy Function:
 
 ```
 firebase deploy --only functions
 ```
 
-## Contibution
+# Contribution
 
 If you find a bug or think that something is hard to understand, please open an issue. Pull requests are also welcome 🙂
 
-## Publish
+# Publish
 
-- package version in package.json
+- Bump version in package.json
 - `npm install`
-- commit changes
+- Commit changes
 - `npm publish --access public`
