@@ -88,5 +88,4 @@ If you find a bug or think that something is hard to understand, please open an 
 
 - Bump version in package.json
 - `npm install`
-- Commit changes
-- `npm publish --access public`
+- Commit with message: `Release {version, e.g. 0.1.6}`
